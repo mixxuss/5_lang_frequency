@@ -1,6 +1,14 @@
 # Frequency Analysis of Words
 
-[TODO. There will be project description]
+This program calculate words frequency in text file and print to console the most frequent word.
+
+# Example
+
+```#!bash
+$ lang_frequency.py C:\Users\admin\PycharmProjects\5_lang_frequency\text.txt
+The most frequent word is and
+
+```
 
 # Project Goals
 
