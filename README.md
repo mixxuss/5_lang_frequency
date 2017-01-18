@@ -5,9 +5,13 @@ This program calculate words frequency in text file and print to console the mos
 # Example
 
 ```#!bash
-$ lang_frequency.py C:\Users\admin\PycharmProjects\5_lang_frequency\text.txt
-The most frequent word is and
-
+C:\Users\admin\python.exe C:/Users/admin/PycharmProjects/5_lang_frequency/lang_frequency.py text.txt
+The most frequent word is
+и
+то
+в
+бесконечно
+не 
 ```
 
 # Project Goals
