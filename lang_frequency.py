@@ -17,10 +17,10 @@ def make_a_list(text):
 
 
 def count_words(text_list):
-    cnt = collections.Counter()
+    counter = collections.Counter()
     for word in text_list:
-        cnt[word] += 1
-    return cnt
+        counter[word] += 1
+    return counter
 
 
 def get_most_frequent_words(counted_dict):
@@ -32,7 +32,8 @@ def get_most_frequent_words(counted_dict):
 if __name__ == '__main__':
     parsed_args = create_parser()
     args = parsed_args.parse_args()
-    file = make_a_list(load_text_from_file(args.filepath))
+    text_list = make_a_list(load_text_from_file(args.filepath))
+    counter = count_words(text_list)
     print("The most frequent word is")
-    for i in get_most_frequent_words(count_words(file)):
+    for i in get_most_frequent_words(counter):
         print(i)
