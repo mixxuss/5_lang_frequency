@@ -13,27 +13,24 @@ def load_text_from_file(filepath):
 
 
 def make_a_list(text):
-    return text.lower().split()
+    return text.lower().replace(',', ' ').replace('.', ' ').split()
 
 
 def count_words(text_list):
-    counter = collections.Counter()
-    for word in text_list:
-        counter[word] += 1
+    counter = collections.Counter(text_list)
     return counter
 
 
-def get_most_frequent_words(counted_dict):
-    words_dict = dict(counted_dict)
-    top5_list = sorted(words_dict, key=words_dict.get, reverse=True)[:5]
-    return top5_list
+def get_most_common_words(counter, words_amount):
+    return counter.most_common(words_amount)
 
 
 if __name__ == '__main__':
     parsed_args = create_parser()
     args = parsed_args.parse_args()
     text_list = make_a_list(load_text_from_file(args.filepath))
-    counter = count_words(text_list)
-    print("The most frequent word is")
-    for i in get_most_frequent_words(counter):
-        print(i)
+    words_counter = count_words(text_list)
+    results_amount = 5
+    results = get_most_common_words(words_counter, results_amount)
+    for word in results:
+        print('Word %s found %d times' % (word[0], word[1]))
