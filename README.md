@@ -4,14 +4,14 @@ This program calculate words frequency in text file and print to console the mos
 
 # Example
 
-```#!bash
-C:\Users\admin\python.exe C:/Users/admin/PycharmProjects/5_lang_frequency/lang_frequency.py text.txt
-The most frequent word is
-и
-то
-в
-бесконечно
-не 
+```
+C:\Users\admin\AppData\Local\Programs\Python\Python36-32\python.exe C:/Users/admin/PycharmProjects/5_lang_frequency/lang_frequency.py C:\Users\admin\PycharmProjects\5_lang_frequency\1.txt
+The most frequent words is:
+Word the found 4665 times
+Word of found 2625 times
+Word a found 1842 times
+Word and found 1722 times
+Word to found 1653 times
 ```
 
 # Project Goals
